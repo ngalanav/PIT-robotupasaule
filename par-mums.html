@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotu Pasaule</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-us, .our-team, .our-values, .contact-promo {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-promo .button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .contact-promo .button:hover {
+        background-color: #0056b3;
+    }
+    /* Content Layout */
+    .content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    /* Main Content */
+    .main-content {
+        flex: 3; /* Takes up 75% of the width */
+        padding-right: 20px;
+    }
+
+    .contact-info {
+        flex: 1; /* Takes up 25% of the width */
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .contact-info h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-item {
+      margin-bottom: 20px;
+    }
+
+    .contact-item img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .contact-item p {
+        margin: 5px 0;
+        font-size: 0.9rem;
+        color: #333;
+    }
+
+    .contact-item p strong {
+        font-size: 1rem;
+    }
+
+    .hero2 {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #007bff;
+        color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="href-no-style" href="#">
+        <div class="logo" >
+        <img src="logo.png" alt="Robotu Pasaule">
+        <h1>ROBOTUPASAULE</h1>
+        </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="sakumlapa.html">Sākums</a></li>
+        <li><a href="roboti.html">Roboti</a></li>
+        <li><a href="par-mums.html">Par Mums</a></li>
+        <li><a href="kontakti.html">Kontakti</a></li>
+        <li><div class="search">
+          <input type="text" placeholder="Meklēt mājaslapā">
+          <button type="submit">
+            <img src="search-icon.jpg" alt="Search">
+          </button>
+        </div>
+      </li>
+      </ul>
+      
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="image-section">
+        <img src="logo.png" alt="Robot Image Placeholder">
+    </div>
+    <div class="text-section">
+        <h2>ROBOTU PASAULE</h2>
+    </div>
+    </section>
+    <main>
+        <div class="content-container">
+          <section class="main-content">
+            <h1>Par Mums</h1>
+            <section class="about-us">
+              <h2>Mūsu Misija</h2>
+              <p>
+                Robotu Pasaule ir vieta, kur tehnoloģijas un inovācijas satiekas. Mūsu mērķis ir
+                nodrošināt plašu, modernu un uzticamu robotu klāstu gan uzņēmumiem, gan privātpersonām. Mēs ticam, ka nākotne ir automatizācija, un mēs esam šeit, lai palīdzētu jums pieņemt šo nākotni.
+              </p>
+            </section>
+    
+            <section class="our-team">
+              <h2>Mūsu Komanda</h2>
+              <p>
+                Mēs esam profesionāļu komanda, kurā apvienojas programmatūras inženieri, robotikas speciālisti un klientu atbalsta eksperti. Mūsu komandas galvenais uzdevums ir nodrošināt, ka mūsu klienti saņem visaugstāko kvalitāti gan produktos, gan pakalpojumos.
+              </p>
+            </section>
+          </section>
+    
+          <!-- RHS Section -->
+          <aside class="contact-info">
+            <h2>Sazinies ar Mums</h2>
+            <div class="contact-item">
+              <img src="phone-icon.png" alt="Phone Icon">
+              <p><strong>+371 28523124</strong></p>
+              <p>Produkti un pasūtījumi 24 stundas diennaktī, 7 dienas nedēļā</p>
+            </div>
+            <div class="contact-item">
+              <img src="chat-icon.png" alt="Chat Icon">
+              <p>Atbalsts pieejams 24/7</p>
+            </div>
+            <div class="contact-item">
+              <img src="email-icon.png" alt="Email Icon">
+              <p>Atbildam piecu darba dienu laikā</p>
+            </div>
+          </aside>
+        </div>
+      </main>
+  <footer class="site-footer">
+    <p>&copy; 2024 Robota Veikals. Visas tiesības aizsargātas.</p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
