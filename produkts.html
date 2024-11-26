@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotu Pasaule</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .product-details {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-header {
+      display: flex;
+      gap: 20px;
+    }
+
+    .product-info {
+      flex: 1;
+    }
+
+    .product-price {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    button {
+      display: inline-block;
+      padding: 10px 15px;
+      margin-top: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #reviews {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+    }
+    #reviews:hover {
+      background:rgba(126, 178, 238, 0.1);
+    }
+    #buy {
+      border: 1px solid #007bff;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    #go-back {
+      display: block;
+      margin: 20px auto;
+      background: #6c757d;
+    }
+
+    #go-back:hover {
+      background: #5a6268;
+    }
+    #product-image {
+      width: 400px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="href-no-style" href="#">
+        <div class="logo" >
+        <img src="logo.png" alt="Robotu Pasaule">
+        <h1>ROBOTUPASAULE</h1>
+        </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="sakumlapa.html">Sākums</a></li>
+        <li><a href="roboti.html">Roboti</a></li>
+        <li><a href="par-mums.html">Par Mums</a></li>
+        <li><a href="kontakti.html">Kontakti</a></li>
+        <li><div class="search">
+          <input type="text" placeholder="Meklēt mājaslapā">
+          <button type="submit">
+            <img src="search-icon.jpg" alt="Search">
+          </button>
+        </div>
+      </li>
+      </ul>
+      
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="image-section">
+        <img src="logo.png" alt="Robot Image Placeholder">
+    </div>
+    <div class="text-section">
+        <h2>ROBOTU PASAULE</h2>
+    </div>
+    </section>
+    <!-- product details -->
+    <main>
+      <section class="product-details">
+        <div class="product-header">
+          <img id="product-image" src="" alt="Product Image">
+          <div class="product-info">
+            <h2 id="product-name"></h2>
+            <p id="product-brand"></p>
+            <p class="product-price" id="product-price"></p>
+            <p id="product-short-desc"></p>
+            <div class="product-buttons">
+              <button id="buy-now">Pirkt</button>
+              <button id="reviews">Atsauksmes</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-description">
+          <h3>Produkta apraksts</h3>
+          <p id="product-long-desc"></p>
+        </div>
+        <button id="go-back">Atpakaļ</button>
+      </section>
+    </main>
+  <footer class="site-footer">
+    <p>&copy; 2024 Robota Veikals. Visas tiesības aizsargātas.</p>
+  </footer>
+  <script src="product.js"></script>
+</body>
+</html>

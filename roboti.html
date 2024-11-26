@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotu Pasaule</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Catalog Section */
+    .catalog {
+      padding: 20px;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      align-items: center;
+      width: 250px;
+      height: 450px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .product-card .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .product-card .inspect-button {
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product-card .buy-button:hover {
+      background-color: #218838;
+    }
+
+    .product-card img.product-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    /* filter styling */
+    .filters {
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .filter-options {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 10px;
+    }
+
+    .filter-button {
+      padding: 10px 15px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .filter-button:hover {
+      background-color: #ddd;
+    }
+
+    .filter-button.active {
+      background-color: #007BFF;
+      color: white;
+      border-color: #007BFF;
+    }
+    /* Price Filter */
+    .price-filter {
+      margin-top: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .price-filter label {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .price-filter input[type="range"] {
+      width: 80%;
+      margin: 5px 0;
+    }
+
+    .price-filter span {
+      font-weight: bold;
+      color: #007BFF;
+    }
+
+    /* sort styling */
+    .sorting-options {
+      margin-top: 10px;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    .sorting-options label {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+
+    .sorting-options select {
+      padding: 5px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .flex-container {
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="href-no-style" href="#">
+        <div class="logo" >
+        <img src="logo.png" alt="Robotu Pasaule">
+        <h1>ROBOTUPASAULE</h1>
+        </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="sakumlapa.html">Sākums</a></li>
+        <li><a href="roboti.html">Roboti</a></li>
+        <li><a href="par-mums.html">Par Mums</a></li>
+        <li><a href="kontakti.html">Kontakti</a></li>
+        <li><div class="search">
+          <input type="text" placeholder="Meklēt mājaslapā">
+          <button type="submit">
+            <img src="search-icon.jpg" alt="Search">
+          </button>
+        </div>
+      </li>
+      </ul>
+      
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="image-section">
+        <img src="logo.png" alt="Robot Image Placeholder">
+    </div>
+    <div class="text-section">
+        <h2>ROBOTU PASAULE</h2>
+    </div>
+    </section>
+  <main>
+  
+    
+    <!-- catalog section -->
+    <section class="catalog flex-container">
+        <div id="product-list" class="product-grid flex-item">
+            <!-- products added here -->
+        </div>
+        <div class="flex-item">
+          <!-- Price Filter -->
+          <div class="price-filter">
+            <label for="price-range">Cena:</label>
+            <input type="range" id="price-range" min="150" max="25000" step="50" value="25000">
+            <span id="price-value">25000 €</span>
+          </div>
+          <!-- sorting options -->
+          <div class="sorting-options">
+            <label for="sort-products">Kārtot pēc:</label>
+            <select id="sort-products">
+              <option value="name-asc">Nosaukums (A-Z)</option>
+              <option value="name-desc">Nosaukums (Z-A)</option>
+              <option value="price-asc">Cena (zemākā)</option>
+              <option value="price-desc">Cena (augstākā)</option>
+            </select>
+          </div>
+          <div class="filter-options">
+            <button class="filter-button" data-category="visi">Visi</button>
+            <button class="filter-button" data-category="mājsaimniecības">Mājsaimniecības</button>
+            <button class="filter-button" data-category="industriālie">Industriālie</button>
+            <button class="filter-button" data-category="biedrošanās">Biedrošanās</button>
+            <button class="filter-button" data-category="pētniecības">Pētniecības</button>
+          </div>
+        </div>
+        
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2024 Robota Veikals. Visas tiesības aizsargātas.</p>
+  </footer>
+  <script src="catalog.js"></script>
+</body>
+</html>

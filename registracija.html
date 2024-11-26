@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotu Pasaule</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+
+.registration-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.registration-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Country Buttons */
+.country-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.country-buttons input[type="radio"] {
+  display: none;
+}
+
+.country-buttons label {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.country-buttons label:hover {
+  background-color: #ddd;
+}
+
+/* Selected State */
+.country-buttons input[type="radio"]:checked + label {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-buttons button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  cursor: pointer;
+  width: 100%;
+  
+}
+
+.form-buttons .cancel {
+  background-color: #fff;
+  color: #333;
+}
+
+.form-buttons .cancel:hover {
+  background-color: #ddd;
+}
+
+.form-buttons .submit {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+.form-buttons .submit:hover {
+  background-color: #555;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <a class="href-no-style" href="#">
+        <div class="logo" >
+        <img src="logo.png" alt="Robotu Pasaule">
+        <h1>ROBOTUPASAULE</h1>
+        </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="sakumlapa.html">Sākums</a></li>
+        <li><a href="roboti.html">Roboti</a></li>
+        <li><a href="par-mums.html">Par Mums</a></li>
+        <li><a href="kontakti.html">Kontakti</a></li>
+        <li><div class="search">
+            <input type="text" placeholder="Meklēt mājaslapā">
+            <button type="submit">
+              <img src="search-icon.jpg" alt="Search">
+            </button>
+          </div>
+        </li>
+      </ul>
+      
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="image-section">
+        <img src="logo.png" alt="Robot Image Placeholder">
+    </div>
+    <div class="text-section">
+        <h2>ROBOTU PASAULE</h2>
+    </div>
+    </section>
+    <main>
+      <div class="flex-container">
+        <div class="flex-item">
+          <H2>Lietotāja reģistrācija</H2>
+          <p>Lūdzu aizpildiet atbilstošas formas</p>
+        </div>
+        <div class="flex-item">
+          <div class="registration-form">
+            <form>
+              <!-- Username -->
+              <div class="form-group">
+                <label for="username">Lietotājvārds</label>
+                <input type="text" id="username" placeholder="Ievadiet savu lietotājvārdu">
+              </div>
+          
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">E-pasts</label>
+                <input type="email" id="email" placeholder="Ievadiet savu e-pastu">
+              </div>
+          
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="phone">Telefona numurs</label>
+                <input type="tel" id="phone" placeholder="Ievadiet savu telefona numuru, kopā ar valsts kodu (LV - +371)">
+              </div>
+          
+              <!-- Password -->
+              <div class="form-group">
+                <label for="password">Parole</label>
+                <input type="password" id="password" placeholder="Ievadiet savu paroli">
+              </div>
+          
+              <!-- Confirm Password -->
+              <div class="form-group">
+                <label for="confirm-password">Atkārtojiet savu paroli</label>
+                <input type="password" id="confirm-password" placeholder="Atkārtojiet savu paroli">
+              </div>
+          
+              <!-- Country Selection -->
+              <div class="form-group">
+                <label>Country</label>
+                <div class="country-buttons">
+                  <input type="radio" id="latvia" name="country" value="Latvija" hidden>
+                  <label for="latvia">Latvija</label>
+
+                  <input type="radio" id="estonia" name="country" value="Igaunija" hidden>
+                  <label for="estonia">Igaunija</label>
+
+                  <input type="radio" id="lithuania" name="country" value="Lietuva" hidden>
+                  <label for="lithuania">Lietuva</label>
+                </div>
+              </div>
+
+          
+              <!-- Buttons -->
+              <div class="form-buttons">
+                <button type="button" class="cancel">Atcelt</button>
+                <button type="submit" class="submit">Reģistrēties</button>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2024 Robota Veikals. Visas tiesības aizsargātas.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
