@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotu Pasaule</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .content-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    /* Hero2 Section */
+    .hero2 {
+        text-align: center;
+        background-color: #007bff;
+        color: white;
+        padding: 40px 20px;
+    }
+
+    .hero2 h1 {
+        font-size: 2rem;
+    }
+
+    /* Contact Details Section */
+    .contact-details {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-details h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-details p {
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    /* Contact Form Section */
+    .contact-form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-form form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        resize: vertical;
+    }
+
+    .contact-form form button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .contact-form form button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Map Section */
+    .map-placeholder {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .map-placeholder .map {
+        background-color: #ddd;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        font-size: 1rem;
+        color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="href-no-style" href="#">
+        <div class="logo" >
+        <img src="logo.png" alt="Robotu Pasaule">
+        <h1>ROBOTUPASAULE</h1>
+        </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="sakumlapa.html">Sākums</a></li>
+        <li><a href="roboti.html">Roboti</a></li>
+        <li><a href="par-mums.html">Par Mums</a></li>
+        <li><a href="kontakti.html">Kontakti</a></li>
+        <li><div class="search">
+          <input type="text" placeholder="Meklēt mājaslapā">
+          <button type="submit">
+            <img src="search-icon.jpg" alt="Search">
+          </button>
+        </div>
+      </li>
+      </ul>
+      
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="image-section">
+        <img src="logo.png" alt="Robot Image Placeholder">
+    </div>
+    <div class="text-section">
+        <h2>ROBOTU PASAULE</h2>
+    </div>
+    </section>
+    <main>
+        <section class="hero2">
+          <h1>Kontakti</h1>
+        </section>
+    
+        <div class="content-container">
+          <!-- Contact Details Section -->
+          <section class="contact-details">
+            <h2>Sazinies ar Mums</h2>
+            <p><strong>Adrese:</strong> Rīgas iela 12, Rīga, Latvija</p>
+            <p><strong>Telefons:</strong> +371 28523124</p>
+            <p><strong>E-pasts:</strong> info@robotupasaule.lv</p>
+            <p><strong>Darba laiks:</strong> Pirmdiena - Piektdiena, 9:00 - 18:00</p>
+          </section>
+    
+          <!-- Contact Form Section -->
+          <section class="contact-form">
+            <h2>Sūti Ziņu</h2>
+            <form action="#" method="POST">
+              <label for="name">Vārds</label>
+              <input type="text" id="name" name="name" placeholder="Ievadi savu vārdu" required>
+    
+              <label for="email">E-pasts</label>
+              <input type="email" id="email" name="email" placeholder="Ievadi savu e-pastu" required>
+    
+              <label for="message">Ziņa</label>
+              <textarea id="message" name="message" rows="5" placeholder="Raksti savu ziņu šeit..." required></textarea>
+    
+              <button type="submit" class="submit-button">Nosūtīt</button>
+            </form>
+          </section>
+    
+          <!-- Map Section -->
+          <section class="map-placeholder">
+            <h2>Atrašanās vieta</h2>
+            <div class="map">
+              <p>[Šeit būs ievietota Google Maps karte]</p>
+            </div>
+          </section>
+        </div>
+      </main>
+  <footer class="site-footer">
+    <p>&copy; 2024 Robota Veikals. Visas tiesības aizsargātas.</p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
