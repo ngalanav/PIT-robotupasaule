@@ -5,6 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Robotu Pasaule</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .profile-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        margin:auto;
+    }
+
+    .profile-container h1 {
+        margin-bottom: 20px;
+    }
+
+    .profile-container p {
+        text-align: left;
+        margin: 10px 0;
+    }
+
+    #logoutButton {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #logoutButton:hover {
+        background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -33,12 +68,41 @@
     </div>
     </section>
   <main>
-
+    <div class="profile-container">
+        <h1>Mans Profils</h1>
+        <div id="profile-details"></div>
+        <button id="logoutButton">Iziet</button>
+    </div>
   </main>
   <footer class="site-footer">
     <p>&copy; 2024 Robota Veikals. Visas tiesības aizsargātas.</p>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+     const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+     if (!loggedInUser) {
+       alert("Lūdzu, pieslēdzieties, lai apskatītu savu profilu.");
+       window.location.href = "sakumlapa.html";
+     } else {
+       // profile details
+       const profileDetails = document.getElementById("profile-details");
+       profileDetails.innerHTML = `
+         <p><strong>Lietotājvārds:</strong> ${loggedInUser.username}</p>
+         <p><strong>E-pasts:</strong> ${loggedInUser.email}</p>
+         <p><strong>Telefona numurs:</strong> ${loggedInUser.phone}</p>
+         <p><strong>Valsts:</strong> ${loggedInUser.country}</p>
+       `;
+     }
+
+     // Logout functionality
+     document.getElementById("logoutButton").addEventListener("click", function () {
+       localStorage.removeItem("loggedInUser");
+       alert("Jūs esat veiksmīgi izrakstījies.");
+       window.location.href = "sakumlapa.html";
+     });
+   });
+    </script>
   <script src="scripts.js"></script>
-  <script src="login.js"></script>
 </body>
 </html>
