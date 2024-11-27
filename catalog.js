@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const sortDropdown = document.getElementById("sort-products");
     const priceRange = document.getElementById("price-range");
     const priceValue = document.getElementById("price-value");
+
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   
     // produktu kategorijas
     const categories = ["visi", "mājsaimniecības", "industriālie", "biedrošanās", "pētniecības"];
@@ -119,7 +121,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <h3>${product.name}</h3>
           <p>${product.shortDescription}</p>
           <p class="price">€${product.price.toFixed(2)}</p>
+          <div class="product-actions">
           <button class="inspect-button">Apskatīt</button>
+          ${
+            loggedInUser
+              ? `<button class="add-to-bin-button" data-id="${product.id}"><img src="cart-icon.png"></button>`
+              : `<p style="color: gray;">Pieslēdzieties, lai pievienotu grozam</p>`
+          }
+        </div>
         `;
         // Add event listener for "Apskatīt" button
     productCard.querySelector(".inspect-button").addEventListener("click", () => {
@@ -129,10 +138,28 @@ document.addEventListener("DOMContentLoaded", () => {
         // Navigate to produkts.html
         window.location.href = "produkts.html";
       });
+
+      if (loggedInUser) {
+        const addToBinButton = productCard.querySelector(".add-to-bin-button");
+        addToBinButton.addEventListener("click", () => {
+          addToBin(product.id);
+        });
+      }
   
         productList.appendChild(productCard);
       });
     }
+     // Add product to the bin
+  function addToBin(productId) {
+    const bin = JSON.parse(localStorage.getItem("bin")) || [];
+    const product = products.find((p) => p.id === parseInt(productId));
+
+    if (product) {
+      bin.push(product);
+      localStorage.setItem("bin", JSON.stringify(bin));
+      alert(`"${product.name}" ir pievienots grozam!`);
+    }
+  }
   
     // Event listener for filter buttons
     filterButtons.forEach(button => {
