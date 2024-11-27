@@ -47,9 +47,9 @@
         <div class="flex-item">
             <section class="auth">
                 <h3>Pieslēdzieties vai reģistrējieties!</h3>
-                <form>
-                  <input type="email" placeholder="Ievadiet savu e-pastu vai lietotājvārdu">
-                  <input type="password" placeholder="Ievadiet savu paroli">
+                <form id="loginForm">
+                  <input type="text" id="login-identifier" placeholder="Ievadiet savu e-pastu vai lietotājvārdu" required>
+                  <input type="password" id="login-password" placeholder="Ievadiet savu paroli" required>
                   <div class="buttons">
                     <button type="submit">Pieslēgties</button>
                     <button type="button" class="register">Reģistrēties</button>
@@ -106,5 +106,6 @@
     <p>&copy; 2024 Robota Veikals. Visas tiesības aizsargātas.</p>
   </footer>
   <script src="scripts.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>
