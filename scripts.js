@@ -14,5 +14,19 @@
     });
   });
 
-
+  document.addEventListener("DOMContentLoaded", function () {
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    const profileSection = document.getElementById("profile-section");
   
+    if (loggedInUser) {
+      // check loggedinuser state, display profile icon
+      profileSection.innerHTML = `
+        <a href="profile.html" title="Mans profils">
+          <img src="profile-icon.png" style="border-radius: 50%; width: 32px; height: 32px;">
+        </a>
+      `;
+    } else {
+      
+      profileSection.innerHTML = ``;
+    }
+  });
