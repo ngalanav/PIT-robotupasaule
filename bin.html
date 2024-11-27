@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotu Pasaule</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .bin-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      padding-bottom: 75px;
+    }
+
+    .bin-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .bin-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .bin-item-details {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .bin-item-details h4 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .bin-item-details p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .bin-item-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .remove-button {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .remove-button:hover {
+      background-color: #b02a37;
+    }
+
+    .total-price {
+      text-align: right;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .checkout-button {
+      background-color: #28a745;
+      color: white;
+      text-align: center;
+      float: right;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .checkout-button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="href-no-style" href="#">
+        <div class="logo" >
+        <img src="logo.png" alt="Robotu Pasaule">
+        <h1>ROBOTUPASAULE</h1>
+        </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="sakumlapa.html">Sākums</a></li>
+        <li><a href="roboti.html">Roboti</a></li>
+        <li><a href="par-mums.html">Par Mums</a></li>
+        <li><a href="kontakti.html">Kontakti</a></li>
+        <li id="profile-section"></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="image-section">
+        <img src="logo.png" alt="Robot Image Placeholder">
+    </div>
+    <div class="text-section">
+        <h2>ROBOTU PASAULE</h2>
+    </div>
+    </section>
+    <main>
+        <div class="bin-container">
+          <h2>Jūsu grozs</h2>
+          <div id="bin-items">
+            
+          </div>
+          <div class="total-price" id="total-price">Kopējā cena: €0.00</div>
+          <a href="checkout.html" class="checkout-button">Pirkt</a>
+        </div>
+      </main>
+  <footer class="site-footer">
+    <p>&copy; 2024 Robota Veikals. Visas tiesības aizsargātas.</p>
+  </footer>
+  <script src="scripts.js"></script>
+  <script src="bin.js"></script>
+</body>
+</html>

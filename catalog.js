@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         category: "mājsaimniecības",
       },
     ];
-    
+
   
     // Render products
     function renderProducts(filterCategory = "visi", sortOption = "name-asc", maxPrice = 25000) {
@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Navigate to produkts.html
         window.location.href = "produkts.html";
       });
+    
 
       if (loggedInUser) {
         const addToBinButton = productCard.querySelector(".add-to-bin-button");
@@ -149,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         productList.appendChild(productCard);
       });
     }
-     // Add product to the bin
+  // Add product to the bin
   function addToBin(productId) {
     const bin = JSON.parse(localStorage.getItem("bin")) || [];
     const product = products.find((p) => p.id === parseInt(productId));
@@ -161,6 +162,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   
+  
+    // event listener for "cart" button
+    const cartButton = document.querySelector(".cart-button");
+    
+    cartButton.addEventListener("click", () => {
+      window.location.href = "bin.html";
+    });
+
     // Event listener for filter buttons
     filterButtons.forEach(button => {
       button.addEventListener("click", () => {
