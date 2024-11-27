@@ -13,7 +13,6 @@
       border: 1px solid #ddd;
       border-radius: 10px;
       background-color: #f9f9f9;
-      padding-bottom: 75px;
     }
 
     .bin-item {
@@ -89,9 +88,24 @@
       font-size: 1rem;
       cursor: pointer;
     }
+    .back-button {
+      background-color: #007BFF;
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
 
+    .back-button:hover {
+        background-color: #0261c7fb;
+    }
     .checkout-button:hover {
-      background-color: #218838;
+        background-color: #218838;
     }
   </style>
 </head>
@@ -128,6 +142,7 @@
             
           </div>
           <div class="total-price" id="total-price">Kopējā cena: €0.00</div>
+          <a href="roboti.html" class="back-button">Atpakaļ</a>
           <a href="checkout.html" class="checkout-button">Pirkt</a>
         </div>
       </main>
